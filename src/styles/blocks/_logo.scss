@@ -1,0 +1,28 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  &__svg {
+    width: 31px;
+    height: 36px;
+    @include transition;
+
+    @include onTablet {
+      width: 37px;
+      height: 45px;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    @include transition;
+    
+    @include onTablet {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+
+  &__button {
+    @include square(36px);
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 400;
+    color: $color-text-secondary;
+
+    @include onTablet {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &__number{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: $color-text-primary;
+    @include transition;
+
+    @include onTablet {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &:hover{
+    .button {
+      background-color: $color-primary-dark-hover;
+    }
+
+    .phone__number {
+      color: $color-primary;
+    }
+  }
+}

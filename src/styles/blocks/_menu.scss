@@ -1,0 +1,33 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include onDesktop {
+    flex-direction: row;
+    gap: 41px;
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    @include transition;
+
+    @include onTablet {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22px;
+    }
+
+    @include onDesktop {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}

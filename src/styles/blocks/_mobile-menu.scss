@@ -1,0 +1,34 @@
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $color-black;
+  z-index: 999;
+
+  @include onTablet {
+    top: 81px;
+  }
+
+  @include onDesktop {
+    display: none;
+  }
+
+  &__container {
+    height: 100%;
+  }
+
+  &__content {
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include square(100%);
+  }
+
+  &--active {
+    display: block;
+  }
+}
