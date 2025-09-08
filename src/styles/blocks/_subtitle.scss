@@ -1,0 +1,22 @@
+.subtitle {
+  width: max-content;
+  padding: 10px 18px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 10%;
+  background-color: $color-primary-dark;
+  border: 1px solid $color-primary;
+  border-radius: 5px;
+  text-transform: uppercase;
+
+  @include onTablet {
+    font-size: 11px;
+    line-height: 13px;
+  }
+
+  &--red {
+    background-color: $color-red-dark;
+    border-color: $color-red;
+  }
+}

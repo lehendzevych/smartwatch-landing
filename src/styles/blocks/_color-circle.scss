@@ -1,0 +1,29 @@
+.color-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background-color: $color-primary-dark;
+  border: 1px solid $color-primary;
+  @include square(100%);
+
+  &--red {
+    background-color: $color-red-dark;
+    border-color: $color-red;
+  }
+
+  &--blue {
+    background-color: $color-blue-dark;
+    border-color: $color-blue;
+  }
+
+  &--green {
+    background-color: $color-green-dark;
+    border-color: $color-green;
+  }
+
+  &--orange {
+    background-color: $color-orange-dark;
+    border-color: $color-orange;
+  }
+}

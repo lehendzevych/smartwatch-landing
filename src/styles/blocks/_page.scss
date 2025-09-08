@@ -10,4 +10,14 @@
     background-color: $color-black;
     scroll-behavior: smooth;
   }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+
+    @include onTablet {
+      gap: 104px;
+    }
+  }
 }

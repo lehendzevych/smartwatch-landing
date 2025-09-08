@@ -1,0 +1,122 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include onDesktop {
+    gap: 40px;
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    @include onTablet {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: auto auto 1fr;
+      grid-auto-rows: auto;
+    }
+
+    @include onDesktop {
+      gap: 24px;
+    }
+  }
+
+  &__subtitle {
+    @include onTablet {
+      grid-column: 1 / 1;
+      max-width: 336px;
+    }
+  }
+
+  &__title {
+    @include onTablet {
+      grid-column: 1 / 4;
+      max-width: 336px;
+    }
+
+    @include onDesktop {
+      max-width: initial;
+    }
+  }
+
+  &__desc {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+
+    @include onTablet {
+      grid-column: 1 / 4;
+      max-width: 336px;
+    }
+
+    @include onDesktop {
+      max-width: initial;
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: -0.2px;
+    }
+  }
+
+  &__img {
+    grid-row: 1/4;
+    grid-column: 4 / 7;
+    width: 100%;
+    max-height: 380px;
+    object-fit: contain;
+
+    @include onTablet {
+      width: 364px;
+    }
+
+    @include onDesktop {
+      position: absolute;
+      top: -32px;
+      right: 0;
+      width: initial;
+      max-height: initial;
+    }
+  }
+
+  &__cta {
+    @include onTablet {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__button {
+    margin-bottom: 20px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+
+    @include onTablet {
+      height: 64px;
+      margin-bottom: 0;
+      width: 324px;
+      font-size: 18px;
+    }
+  }
+
+  &__new-price {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    color: $color-primary;
+  }
+
+  &__old-price {
+    text-decoration: line-through;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+  }
+}

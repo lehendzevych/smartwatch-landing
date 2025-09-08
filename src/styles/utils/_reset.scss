@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+body, h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
@@ -15,10 +15,14 @@ ul {
 }
 
 button {
+  font: inherit;
+  padding: 0;
   font-family: inherit;
   font-style: inherit;
-  padding: 0;
-  background-color: none;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
   border: none;
   cursor: pointer;
 }

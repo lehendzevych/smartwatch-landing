@@ -1,12 +1,12 @@
 .header {
-  padding: 18px;
+  padding: 18px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   @include transition;
 
   @include onDesktop {
-    padding: 32px;
+    padding: 32px 0;
   }
 }
 
