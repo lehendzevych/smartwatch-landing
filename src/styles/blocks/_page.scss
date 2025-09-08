@@ -1,0 +1,9 @@
+.page {
+  @extend %main-text;
+  color: #f9f9f9;
+
+  &__body {
+    background-color: #000;
+    scroll-behavior: smooth;
+  }
+}
