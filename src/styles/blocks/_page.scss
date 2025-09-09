@@ -5,11 +5,12 @@
   line-height: 17px;
   font-weight: 400;
   color: $color-text-primary;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 
   &__body {
     background-color: $color-black;
-    scroll-behavior: smooth;
-    overflow-x: hidden; 
+    overflow: hidden;
   }
 
   &__main {
@@ -20,5 +21,9 @@
     @include onTablet {
       gap: 104px;
     }
+  }
+
+  &--hide-scroll {
+    overflow: hidden;
   }
 }
