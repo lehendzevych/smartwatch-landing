@@ -18,3 +18,19 @@
     @content;
   }
 }
+
+@mixin container {
+  box-sizing: content-box;
+  padding: 0 20px;
+
+  @include onTablet {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 728px;
+  }
+
+  @include onDesktop {
+    padding: 0 40px;
+    max-width: 1180px;
+  }
+}

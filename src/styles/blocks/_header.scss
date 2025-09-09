@@ -1,41 +1,51 @@
 .header {
+  position;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: $color-black;
+  z-index: 99;
   padding: 18px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   @include transition;
 
   @include onDesktop {
     padding: 32px 0;
   }
-}
 
-.header__mobile-burger {
-  @include square(36px);
-  @include onDesktop {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include container;
+  }
+
+  &__mobile-burger {
+    @include square(36px);
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__mobile-burger-svg {
+    & path {
+      @include transition;
+      transform: translate(0, 0) rotate(0);
+    }
+
+    &--active path:nth-child(1) {
+      transform: translate(-5px, 8px) rotate(-40deg);
+    }
+
+    &--active path:nth-child(3) {
+      transform: translate(5px, -4px) rotate(39deg);
+    }
+  }
+
+  &__phone, &__nav {
     display: none;
-  }
-}
 
-.header__mobile-burger-svg {
-  & path {
-    @include transition;
-    transform: translate(0, 0) rotate(0);
-  }
-
-  &--active path:nth-child(1) {
-    transform: translate(-5px, 8px) rotate(-40deg);
-  }
-
-  &--active path:nth-child(3) {
-    transform: translate(5px, -4px) rotate(39deg);
-  }
-}
-
-.header__phone, .header__nav {
-  display: none;
-
-  @include onDesktop {
-    display: block;
+    @include onDesktop {
+      display: block;
+    }
   }
 }

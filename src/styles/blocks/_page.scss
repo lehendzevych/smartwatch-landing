@@ -6,11 +6,11 @@
   font-weight: 400;
   color: $color-text-primary;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
 
   &__body {
     background-color: $color-black;
-    overflow: hidden;
+    overflow: clip;
   }
 
   &__main {

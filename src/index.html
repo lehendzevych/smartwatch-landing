@@ -9,8 +9,8 @@
   </head>
 
   <body class="page__body">
-    <div class="container">
-      <header class="header">
+    <header class="header">
+      <div class="header__container">
         <a href="/" class="logo">
           <svg xmlns="http://www.w3.org/2000/svg" class="logo__svg" viewBox="0 0 37 46" fill="none">
             <mask id="path-1-inside-1_2242_1752" fill="white">
@@ -71,7 +71,8 @@
             </svg>
           </button>
         </div>
-      </header>
+      </div>
+    </header>
 
     <div class="mobile-menu">
       <div class="mobile-menu__container container">
@@ -79,19 +80,19 @@
           <nav class="mobile-menu__nav">
             <ul class="menu">
               <li>
-                <a href="/" class="menu__link">O продукте</a>
+                <a href="#about" class="menu__link">O продукте</a>
               </li>
 
               <li>
-                <a href="/" class="menu__link">Почему мы</a>
+                <a href="#benefits" class="menu__link">Почему мы</a>
               </li>
 
               <li>
-                <a href="/" class="menu__link">Отзывы</a>
+                <a href="#reviews" class="menu__link">Отзывы</a>
               </li>
 
               <li>
-                <a href="/" class="menu__link">Оставить заявку</a>
+                <a href="#contact" class="menu__link">Оставить заявку</a>
               </li>
             </ul>
           </nav>
@@ -130,16 +131,21 @@
               Управляйте звонками, сообщениями, музыкой, навигацией и своим самочувствием одним касанием. Новые умные часы — все возможности вашего смартфона прямо y вас на запястье.
             </p>
 
-            <img
-              src="/images/hero.png"
-              class="hero__img"
-              alt="Очень умные часы"
-            >
+            <div class="hero__img-wrap">
+              <picture>
+                <source srcset="/images/hero.webp" type="image/webp">
+                <img
+                  src="/images/hero.png"
+                  class="hero__img"
+                  alt="Очень умные часы"
+                >
+              </picture>
+            </div>
           </div>
 
           <div class="hero__cta">
             <div class="hero__button">
-              <a href="#contact" class="button" type="button">
+              <a href="#contact" class="button">
                 Заказать консультацию
               </a>
             </div>
@@ -154,11 +160,16 @@
 
       <div class="container">
         <section class="about" id="about">
-          <img
-            src="/images/about.jpg"
-            alt="About it"
-            class="about__img"
-          >
+          <div class="about__img-wrap">
+            <picture>
+              <source srcset="/images/about.webp" type="image/webp">
+              <img
+                src="/images/about.jpg"
+                alt="About it"
+                class="about__img"
+              >
+            </picture>
+          </div>
 
           <div>
             <div class="about__subtitle">

@@ -3,15 +3,20 @@
   align-items: flex-end;
   gap: 100px;
 
-  &__img {
+  &__img-wrap {
     display: none;
 
     @include onDesktop {
       display: block;
+    }
+  }
+
+  &__img {
+    @include onDesktop {
       width: 500px;
       height: 600px;
       border-radius: 10px;
-      object-fit: contain;
+      object-fit: cover;
     }
   }
 
@@ -64,8 +69,8 @@
   &::before {
     content: '';
     position: absolute;
-    background: url('../../images/decor/2.png') no-repeat center/contain;
-    z-index: -1;
+    background: url('../../images/decor/2.webp') no-repeat center/contain;
+    // z-index: -1;
     width: 231px;
     height: 214px;
     top: -110px;
