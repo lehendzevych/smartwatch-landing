@@ -1,0 +1,44 @@
+.contact {
+  &__title {
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  &__text {
+    margin-bottom: 36px;
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    color: $color-text-secondary;
+    text-align: center;
+
+    @include onDesktop {
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: -0.2px;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+
+    @include onTablet {
+      background: url('../../images/decor/4.png') no-repeat center/contain;
+      width: 440px;
+      height: 268px;
+      top: -96px;
+      right: -158px;
+    }
+
+    @include onDesktop {
+      width: 550px;
+      height: 388px;
+      top: 42px;
+      right: -450px;
+    }
+  }
+}

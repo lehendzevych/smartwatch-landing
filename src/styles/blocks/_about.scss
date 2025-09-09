@@ -58,5 +58,29 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
+    color: $color-text-secondary;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: url('../../images/decor/2.png') no-repeat center/contain;
+    z-index: -1;
+    width: 231px;
+    height: 214px;
+    top: -110px;
+    right: -107px;
+
+    @include onTablet {
+      width: 371px;
+      height: 354px;
+      top: 144px;
+      right: -154px;
+    }
+
+    @include onDesktop {
+      top: 200px;
+      right: -350px;
+    }
   }
 }

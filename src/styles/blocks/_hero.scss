@@ -47,6 +47,7 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 22px;
+    color: $color-text-secondary;
 
     @include onTablet {
       grid-column: 1 / 4;
@@ -93,15 +94,11 @@
   &__button {
     margin-bottom: 20px;
     height: 56px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 22px;
 
     @include onTablet {
       height: 64px;
       margin-bottom: 0;
       width: 324px;
-      font-size: 18px;
     }
   }
 
@@ -118,5 +115,32 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
+    color: $color-text-secondary;
+  }
+
+  &__bg4 {
+    position: absolute;
+    right: 0;
+    top: 2226px;
+    z-index: -1;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+
+    @include onTablet {
+      background: url('../../images/decor/1.png') no-repeat center/contain;
+      width: 313px;
+      height: 357px;
+      bottom: -206px;
+      left: -276px;
+    }
+
+    @include onDesktop {
+      bottom: -240px;
+      left: -438px;
+    }
   }
 }

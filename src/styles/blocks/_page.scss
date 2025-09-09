@@ -9,6 +9,7 @@
   &__body {
     background-color: $color-black;
     scroll-behavior: smooth;
+    overflow-x: hidden; 
   }
 
   &__main {

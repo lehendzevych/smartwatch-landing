@@ -35,5 +35,25 @@
 
   &__item-desc {
     text-align: center;
+    color: $color-text-secondary;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+
+    @include onTablet {
+      background: url('../../images/decor/3.png') no-repeat center/contain;
+      width: 458px;
+      height: 228px;
+      top: 306px;
+      left: -276px;
+    }
+
+    @include onDesktop {
+      top: 96px;
+      left: -416px;
+    }
   }
 }

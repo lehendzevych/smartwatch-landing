@@ -1,0 +1,16 @@
+.reviews {
+  &__title {
+    margin-bottom: 46px;
+    text-align: center;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include onDesktop {
+      flex-direction: row;
+    };
+  }
+}
